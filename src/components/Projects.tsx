@@ -2,21 +2,16 @@ type Project = {
   title: string;
   description: string;
   tags: string[];
-  href?: string;
+  href: string;
 };
 
 const projects: Project[] = [
   {
-    title: "To-Do List",
-    description:
-      "Gestor de tareas en JavaScript puro con filtros y persistencia en localStorage.",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-  {
     title: "Portfolio personal",
     description:
-      "Este sitio, construido con Next.js, TypeScript y Tailwind CSS.",
+      "Este sitio, construido con Next.js, TypeScript y Tailwind CSS. Código abierto en GitHub.",
     tags: ["Next.js", "TypeScript", "Tailwind"],
+    href: "https://github.com/andresruizjolivert-web/portfolio",
   },
 ];
 
@@ -29,8 +24,11 @@ export default function Projects() {
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {projects.map((project) => (
-            <article
+            <a
               key={project.title}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/20"
             >
               <h3 className="text-lg font-semibold text-zinc-50">
@@ -49,7 +47,7 @@ export default function Projects() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </a>
           ))}
         </div>
       </div>

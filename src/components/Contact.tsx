@@ -1,7 +1,10 @@
 const links = [
   { label: "Email", href: "mailto:andres.ruiz.jolivert@gmail.com" },
-  { label: "GitHub", href: "https://github.com/" },
-  { label: "LinkedIn", href: "https://linkedin.com/" },
+  { label: "GitHub", href: "https://github.com/andresruizjolivert-web" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/andr%C3%A9s-quir%C3%B3s-ruiz-53b8411ba/",
+  },
 ];
 
 export default function Contact() {
