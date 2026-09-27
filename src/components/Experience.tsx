@@ -1,3 +1,8 @@
+import Reveal from "@/components/motion/Reveal";
+import Section from "@/components/Section";
+import SectionHeading from "@/components/SectionHeading";
+import TagList from "@/components/TagList";
+
 type Job = {
   role: string;
   company: string;
@@ -46,17 +51,14 @@ const jobs: Job[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="border-t border-white/10">
-      <div className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="text-sm font-semibold uppercase tracking-widest text-sky-400">
-          Experiencia
-        </h2>
-        <div className="mt-8 flex flex-col gap-8">
-          {jobs.map((job) => (
-            <article
-              key={`${job.company}-${job.period}`}
-              className="rounded-xl border border-white/10 bg-white/[0.03] p-6"
-            >
+    <Section id="experience">
+      <Reveal>
+        <SectionHeading>Experiencia</SectionHeading>
+      </Reveal>
+      <div className="mt-8 flex flex-col gap-8">
+        {jobs.map((job, index) => (
+          <Reveal key={`${job.company}-${job.period}`} delay={index * 0.1}>
+            <article className="rounded-xl border border-white/10 bg-white/[0.03] p-6 transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-white/20">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-lg font-semibold text-zinc-50">
                   {job.role} · {job.company}
@@ -71,20 +73,11 @@ export default function Experience() {
                   <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {job.stack.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-full bg-white/5 px-3 py-1 text-xs text-zinc-400"
-                  >
-                    {tech}
-                  </li>
-                ))}
-              </ul>
+              <TagList tags={job.stack} />
             </article>
-          ))}
-        </div>
+          </Reveal>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }

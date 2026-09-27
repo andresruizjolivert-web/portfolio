@@ -1,3 +1,7 @@
+import Reveal from "@/components/motion/Reveal";
+import Section from "@/components/Section";
+import SectionHeading from "@/components/SectionHeading";
+
 const links = [
   { label: "Email", href: "mailto:andres.ruiz.jolivert@gmail.com" },
   { label: "GitHub", href: "https://github.com/andresruizjolivert-web" },
@@ -9,11 +13,9 @@ const links = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="border-t border-white/10">
-      <div className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="text-sm font-semibold uppercase tracking-widest text-sky-400">
-          Contacto
-        </h2>
+    <Section id="contact">
+      <Reveal>
+        <SectionHeading>Contacto</SectionHeading>
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-zinc-300">
           ¿Buscas un desarrollador con experiencia sólida en backend y ganas
           de crecer en el stack web moderno? Hablemos.
@@ -25,14 +27,14 @@ export default function Contact() {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-zinc-50 transition-colors hover:bg-white/5"
+                className="inline-block rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-zinc-50 transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-white/5"
               >
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
-      </div>
-    </section>
+      </Reveal>
+    </Section>
   );
 }
