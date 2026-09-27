@@ -6,12 +6,13 @@ export default function About() {
           Sobre mí
         </h2>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-300">
-          Estoy dando mis primeros pasos serios en el desarrollo web,
-          construyendo proyectos reales para consolidar fundamentos de
-          HTML, CSS y JavaScript, y avanzando hacia React, TypeScript y
-          Next.js. Me interesa especialmente el desarrollo fullstack y
-          entender cómo se conectan frontend, backend y bases de datos en
-          una aplicación real.
+          Desarrollador de software con más de 5 años de experiencia en
+          entornos .NET, diseñando y manteniendo aplicaciones para banca
+          (BBVA) e industria (ANAV) — desde backends en C# y ASP.NET hasta
+          la gestión de bases de datos SQL Server y Oracle. Ahora estoy
+          ampliando mi perfil hacia el desarrollo web moderno con React,
+          TypeScript y Next.js, combinando esa base sólida de backend con
+          las herramientas que el mercado frontend demanda hoy.
         </p>
       </div>
     </section>

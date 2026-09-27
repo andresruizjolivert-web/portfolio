@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Andrés Ruiz Jolivert — Desarrollador Web",
-  description: "Portfolio y carta de presentación de Andrés Ruiz Jolivert, desarrollador web.",
+  title: "Andrés Quirós — Desarrollador de Software",
+  description: "Portfolio y carta de presentación de Andrés Quirós, desarrollador de software especializado en .NET y en expansión hacia el desarrollo web moderno.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

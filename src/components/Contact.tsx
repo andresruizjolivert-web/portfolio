@@ -12,7 +12,8 @@ export default function Contact() {
           Contacto
         </h2>
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-zinc-300">
-          ¿Buscas a alguien con ganas de aprender y construir? Hablemos.
+          ¿Buscas un desarrollador con experiencia sólida en backend y ganas
+          de crecer en el stack web moderno? Hablemos.
         </p>
         <ul className="mt-6 flex flex-wrap gap-4">
           {links.map((link) => (
